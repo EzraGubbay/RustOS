@@ -15,7 +15,8 @@ features = ["spin_no_std"]
 [[bin]]
 name = "RustOS"
 bench = false
-test = false
+test = true
 
 [package.metadata.bootimage]
 run-args = ["-monitor", "stdio"]
+test-args = ["-device", "isa-debug-exit,iobase=0xf4,iosize=0x04"]
